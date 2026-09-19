@@ -8,12 +8,13 @@
   <meta property="og:title" content="Sky Instrument" />
   <meta property="og:description" content="14:02 iron" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sky-instrument.vercel.app/og-iron.jpg" />
   <style>
     :root { --paper: #f3f1ec; --ink: #161616; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: var(--paper); color: var(--ink); }
     body {
-      font-family: ui-monospace, "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+      font-family: ui-monospace, "IBM Plex Mono", Menlo, Consolas, monospace;
       -webkit-font-smoothing: antialiased;
     }
     header {
@@ -28,21 +29,7 @@
     main { display: grid; grid-template-columns: 1fr; }
     @media (min-width: 900px) { main { grid-template-columns: 1fr 1fr; } }
     article { display: flex; flex-direction: column; }
-    .sky { aspect-ratio: 1200 / 630; width: 100%; display: block; }
-    .iron {
-      background:
-        radial-gradient(120% 80% at 50% 120%, #6a7380 0%, transparent 55%),
-        linear-gradient(180deg, #2a2d32 0%, #4a5160 42%, #6d7580 58%, #3c424c 100%);
-    }
-    .glass {
-      background: radial-gradient(ellipse at 48% 38%, #ffffff 0%, #d9e6f2 28%, #b7c9dc 100%);
-    }
-    .milk {
-      background: radial-gradient(ellipse at 50% 40%, #fffcf7 0%, #efe8dc 55%, #d8d3cb 100%);
-    }
-    .sodium {
-      background: linear-gradient(180deg, #0c1424 0%, #1c2740 38%, #6a4a22 78%, #c4842a 100%);
-    }
+    .sky { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; display: block; background: #ddd; }
     figcaption {
       background: var(--paper);
       padding: 18px 24px 22px;
@@ -61,19 +48,19 @@
   </header>
   <main>
     <article>
-      <div class="sky iron" role="img" aria-label="Before-rain iron sky"></div>
+      <img class="sky" src="iron.jpg" alt="Before-rain iron sky" />
       <figcaption>14:02 <span class="word">iron</span></figcaption>
     </article>
     <article>
-      <div class="sky glass" role="img" aria-label="High-pressure glass sky"></div>
+      <img class="sky" src="glass.jpg" alt="High-pressure glass sky" />
       <figcaption>06:14 <span class="word">glass</span></figcaption>
     </article>
     <article>
-      <div class="sky milk" role="img" aria-label="Lake-effect milk sky"></div>
+      <img class="sky" src="milk.jpg" alt="Lake-effect milk sky" />
       <figcaption>11:48 <span class="word">milk</span></figcaption>
     </article>
     <article>
-      <div class="sky sodium" role="img" aria-label="Ten pm sodium sky"></div>
+      <img class="sky" src="sodium.jpg" alt="Ten pm sodium sky" />
       <figcaption>22:17 <span class="word">sodium</span></figcaption>
     </article>
   </main>
