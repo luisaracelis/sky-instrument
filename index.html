@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sky Instrument</title>
+  <meta name="description" content="What the air is doing." />
+  <meta property="og:title" content="Sky Instrument" />
+  <meta property="og:description" content="14:02 iron" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root { --paper: #f3f1ec; --ink: #161616; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--paper); color: var(--ink); }
+    body {
+      font-family: ui-monospace, "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      padding: 28px 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .mark { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; }
+    .sub { font-size: 11px; letter-spacing: 0.04em; opacity: 0.55; }
+    main { display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { main { grid-template-columns: 1fr 1fr; } }
+    article { display: flex; flex-direction: column; }
+    .sky { aspect-ratio: 1200 / 630; width: 100%; display: block; }
+    .iron {
+      background:
+        radial-gradient(120% 80% at 50% 120%, #6a7380 0%, transparent 55%),
+        linear-gradient(180deg, #2a2d32 0%, #4a5160 42%, #6d7580 58%, #3c424c 100%);
+    }
+    .glass {
+      background: radial-gradient(ellipse at 48% 38%, #ffffff 0%, #d9e6f2 28%, #b7c9dc 100%);
+    }
+    .milk {
+      background: radial-gradient(ellipse at 50% 40%, #fffcf7 0%, #efe8dc 55%, #d8d3cb 100%);
+    }
+    .sodium {
+      background: linear-gradient(180deg, #0c1424 0%, #1c2740 38%, #6a4a22 78%, #c4842a 100%);
+    }
+    figcaption {
+      background: var(--paper);
+      padding: 18px 24px 22px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(22,22,22,0.12);
+    }
+    figcaption .word { letter-spacing: 0.08em; }
+    footer { padding: 28px 24px 40px; font-size: 11px; letter-spacing: 0.04em; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="mark">Sky Instrument</div>
+    <div class="sub">issue 01 · four states</div>
+  </header>
+  <main>
+    <article>
+      <div class="sky iron" role="img" aria-label="Before-rain iron sky"></div>
+      <figcaption>14:02 <span class="word">iron</span></figcaption>
+    </article>
+    <article>
+      <div class="sky glass" role="img" aria-label="High-pressure glass sky"></div>
+      <figcaption>06:14 <span class="word">glass</span></figcaption>
+    </article>
+    <article>
+      <div class="sky milk" role="img" aria-label="Lake-effect milk sky"></div>
+      <figcaption>11:48 <span class="word">milk</span></figcaption>
+    </article>
+    <article>
+      <div class="sky sodium" role="img" aria-label="Ten pm sodium sky"></div>
+      <figcaption>22:17 <span class="word">sodium</span></figcaption>
+    </article>
+  </main>
+  <footer>what the air is doing · no forecast</footer>
+</body>
+</html>
